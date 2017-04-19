@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <title>Angular 1 Example Application</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src = "js/angular.min.js"></script>
+    <script src ="js/app.js"></script>
+    
+</head>
+<body ng-controller="app">
+    <div class="container">
+      <div id="name-group" class="form-group">
+        <label>Type something</label>
+        <br/>
+        <input type="text" class="form-control"  ng-model="Firstname" ng-keyup="keyup()" ng-keydown="keydown()" ng-blur="blur()"  ng-change="change()" placeholder="Type here and check the Title in Tab"/>
+        <br/>
+      </div>
+
+      <div class="rows">
+        <div class="col-md-12">
+          <div class="data" ng-repeat="data in data_server">
+            {{ data.Firstname }} {{data.Lastname}} - {{data.Gender}}
+            <hr/>
+          </div>
+          <div ng-show="data_server.length == 0"  >
+            <div class="alert alert-info" >
+              <p class="text-center" >
+                Sorry, we can't find {{Firstname}} at the moment!!  
+              </p >
+            </div >
+          </div >
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>

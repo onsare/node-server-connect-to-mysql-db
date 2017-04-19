@@ -1,0 +1,18 @@
+{
+  "name": "connect-to-mysql",
+  "version": "1.0.0",
+  "description": "connect to mysql database and fetch searches",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "denis onsare",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "body-parser": "^1.17.1",
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.2",
+    "mysql": "^2.13.0"
+  }
+}
